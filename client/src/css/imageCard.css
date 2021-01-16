@@ -1,0 +1,23 @@
+.image-card-container
+{
+    padding : 20px 20px;
+    background-color: var(--header-background);
+    width : 100%;
+}
+.image-card-image
+{
+    margin : 20px 0px;
+    width : 100%;
+    height : 310px;
+    transition: 0.5s all ease-in-out;
+}
+.image-card-image:hover
+{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+@media(max-width:440px){
+    .image-card-image{height : 280px}
+    .image-card-container{padding : 20px 0px 20px 0px}
+}

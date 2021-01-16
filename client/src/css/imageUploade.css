@@ -1,0 +1,64 @@
+.image-upload-container
+{
+    padding : 20px 20px;
+    width : 100%;
+    background-color: var(--body-background);
+    text-align: center;
+}
+.image-upload-heading
+{
+    padding : 15px 0px;
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color : rgb(77, 74, 74);
+    text-align: center;
+}
+.image-upload-info
+{
+    padding : 15px 0px;
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color :rgb(66, 65, 65);
+}
+.image-upload-container label input
+{
+    height: 0;
+    width : 0;
+    opacity: 0;
+}
+.image-upload-container label span
+{
+    display : block;
+    width : 45px;
+    height: 45px;
+    font-size: 26px;
+    font-weight: bold;
+    margin : 5px 0px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(240, 173, 185);
+}
+.image-upload-container label span:hover
+{
+    cursor: pointer;
+}
+.image-upload-error
+{
+    color : rgb(236, 72, 72);
+    font-size: 14px;
+    padding : 10px 0px;
+    font-family: 'Noto Serif', sans-serif;
+}
+.image-upload-file-name
+{
+    font-size: 14px;
+    padding : 10px 0px;
+    color : rgb(235, 92, 92);
+    font-family: 'Noto Serif', sans-serif;
+}
+
+@media(max-width : 440px){
+    .image-upload-container{ padding : 20px 0px 20px 0px }
+}
