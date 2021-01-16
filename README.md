@@ -2,7 +2,7 @@
 
   Upload-Your-Gallery-App
   
-  -> Saffron, This is an Gallery Website. Which we an upload our images and reterive at any time. 
+  -> Saffron, This is an Gallery Website. Which we an upload our images and retrieve at any time. 
   
 
 # Bulid With 🔥
