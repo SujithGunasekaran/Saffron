@@ -24,11 +24,16 @@
     background-color: var(--header-background);
     margin-left: auto;
     border: none;
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 0.1px;
     color : rgb(241, 153, 169);
 }
-/* 
+.header-login-name a
+{
+    color : rgb(241, 153, 169);
+    text-decoration: none;
+}
+
 @media(max-width : 440px){
-    .header-container{padding : 20px 0px 20px 0px}
-} */
+    .header-container{padding : 20px 5px 20px 5px}
+}

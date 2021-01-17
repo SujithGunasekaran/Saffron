@@ -3,7 +3,7 @@ import { galleryStorage, galleryFireStore, timestamp } from '../Firebase/config'
 
 const useFirestore = (image) => {
 
-    const [progress, setProgress] = useState();
+    const [progress, setProgress] = useState(0);
     const [imageUploadeError, setImageUploadError] = useState('')
     const [URL, setUrl] = useState('');
 

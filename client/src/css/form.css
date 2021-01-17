@@ -1,0 +1,176 @@
+.form-main
+{
+    padding : 20px 20px;
+    background-color: rgb(245, 235, 236);
+    width : 100%;
+    min-height : 100vh;
+}
+.form-container
+{
+    width : 100%;
+    margin : 30px 0px;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 6px rgba(66,4,117,.16), 0 3px 6px rgba(23,6,117,.23);
+}
+.form-logo-name
+{
+    text-align: center;
+    padding : 15px 0px;
+    font-family: 'Courgette', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color : rgb(241, 153, 169);
+}
+.form-heading-name
+{
+    padding : 10px 0px;
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color : rgb(100, 96, 96);
+    text-align: center;
+}
+.form-heading-name-hr
+{
+    margin-left: auto;
+    margin-right: auto;
+    width : 110px;
+    background-color:  rgb(219, 16, 53);
+    border : 2px solid  rgb(194, 13, 46);
+}
+.form-container form
+{
+    padding : 30px 20px;
+}
+.form-label
+{
+    width : 100%;
+    padding : 20px 0px 0px 15px;
+    font-family: "Nunito",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color : rgb(241, 153, 169);
+}
+.form-input-field
+{
+    margin : 0px 15px 0px 15px;
+    width : 93%;
+    height: 45px;
+    border : none;
+    border-bottom: 2px solid rgb(240, 137, 156);
+    font-family: "Nunito",sans-serif;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+    font-size: 15px;
+    background-color: whitesmoke;
+    color : rgb(85, 83, 83);
+    transition: 0.5s all ease-in-out;
+}
+.form-input-field::placeholder
+{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font-size: 13px; 
+    color : rgb(204, 183, 191);
+}
+.form-input-field:focus
+{
+    outline: none;
+    border-bottom: 3px solid rgb(240, 137, 156);
+}
+.form-submit-btn
+{
+    margin : 45px 15px 15px 15px;
+    width : 93%;
+    border : none;
+    border-radius: 50px;
+    height : 45px;
+    background-color: rgb(230, 171, 182);
+    font-size: 17px;
+    color : rgb(56, 55, 55);
+    font-family: "Nunito",sans-serif;
+    transition: 0.5s all ease-in-out;
+}
+.form-submit-btn:hover
+{
+    background-color: rgb(243, 125, 147);
+}
+.form-submit-btn:focus
+{
+    outline : none;
+}
+.form-having-account
+{
+    text-align: center;
+    padding : 35px 0px 25px 0px;
+    font-family: "Nunito",sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    color : rgb(85, 82, 83);
+}
+.form-having-account a
+{
+    display: inline-block;
+    text-decoration: none;
+    color : rgb(238, 144, 161);
+}
+.form-having-account a:focus
+{
+    outline: none;
+    text-decoration: none;
+    color : rgb(238, 144, 161);
+}
+.form-error
+{
+    color : red;
+    padding : 5px 0px 0px 15px;
+    font-size: 13px;
+    transition: 0.5s all ease-in-out;
+}
+.form-signup-success
+{
+    color : green;
+    padding : 5px 0px 0px 15px;
+    font-size: 15px;
+    transition: 0.5s all ease-in-out;
+}
+.form-signup-success a
+{
+    color: rgb(241, 151, 166);
+    text-decoration: none;
+}
+.form-signup-success a:focus
+{
+    text-decoration: none;
+}
+.form-footer-hr
+{
+    background-color: rgb(241, 151, 166);
+}
+.form-footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding : 10px 0px;
+}
+.form-footer-name
+{
+    padding : 10px 0px 10px 0px;
+    font-family: "Nunito",sans-serif;
+    font-size: 15px;
+    color : rgb(238, 144, 161);
+}
+.form-footer-name a
+{
+    display: inline-block;
+    text-decoration: none;
+    color : rgb(238, 144, 161);
+}
+
+@media(max-width : 440px){
+    .form-main{padding : 20px 5px 20px 5px}
+}
