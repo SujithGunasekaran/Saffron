@@ -1,6 +1,6 @@
 # Saffron
-
-  Upload-Your-Gallery-App
+  
+  Gallery-App
   
   -> Saffron, This is an Gallery Website. Which we an upload our images and retrieve at any time. 
   
