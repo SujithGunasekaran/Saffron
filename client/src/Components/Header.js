@@ -14,6 +14,7 @@ function Header(props) {
     const removerUsername = () => {
         props.setUserName('')
         props.setUserToken('')
+        window.localStorage.clear('state')
     }
 
     return (
