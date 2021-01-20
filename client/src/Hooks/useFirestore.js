@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { galleryStorage, galleryFireStore, timestamp } from '../Firebase/config';
 
-const useFirestore = (image) => {
+const useFirestore = (image, userName) => {
 
     const [progress, setProgress] = useState(0);
     const [imageUploadeError, setImageUploadError] = useState('')
@@ -9,6 +9,7 @@ const useFirestore = (image) => {
 
     useEffect(() => {
         const uploadImage = async () => {
+            console.log(userName)
             const storeageRef = galleryStorage.ref();
             const collectionRef = galleryFireStore.collection('images');
             const fileRef = storeageRef.child(image.name);
@@ -23,7 +24,9 @@ const useFirestore = (image) => {
                     const url = await fileRef.getDownloadURL();
                     setUrl(url);
                     const createdAt = timestamp();
-                    collectionRef.add({ url, createdAt });
+                    const imageName = image.name;
+                    const username = userName;
+                    collectionRef.add({ username, imageName, url, createdAt });
                 })
         }
         uploadImage();
