@@ -28,13 +28,16 @@ export default function ImageUpload() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="image-upload-heading">Your Pictures</div>
-                            <div className="image-upload-info">Upload Your Image. Get back your Images at any time and anywhere</div>
+                            <div className="image-upload-heading">Pictures</div>
                             <label>
                                 <input type="file" onChange={imageUploader} />
-                                <Tooltip title="Upload Image" arrow>
+                                <div className="image-upload-tooltip">
+                                    <span className="image-upload-icon"><AddIcon style={{ fontSize: '20px' }} /></span>
+                                    <span className="image-upload-tooltip-open">Upload Image</span>
+                                </div>
+                                {/* <Tooltip title="Upload Image" arrow>
                                     <span><AddIcon style={{ fontSize: '20px' }} /></span>
-                                </Tooltip>
+                                </Tooltip> */}
                             </label>
                             {
                                 fileName ? <div className="image-upload-file-name">Uploading {fileName.name}...</div> : null

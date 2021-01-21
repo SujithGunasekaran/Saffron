@@ -49,7 +49,7 @@ export default function ImageCard({ setSelectedImage }) {
                                 <div className="col-md-4" key={index}>
                                     <img className="image-card-image" src={image.url} alt="image" onClick={() => setSelectedImage(image.url)} />
                                     <div className="image-info-display">
-                                        <div className="image-card-username">{image.username}</div>
+                                        <div className="image-card-username">Published By : {image.username}</div>
                                         <FiDownload className="image-card-download-icon" onClick={() => downloadImage(image.url, image.imageName)} />
                                     </div>
                                 </div>
