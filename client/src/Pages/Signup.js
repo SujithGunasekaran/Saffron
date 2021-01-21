@@ -6,78 +6,7 @@ import useForm from '../Hooks/useForm';
 function Signup() {
 
     const [pageName, setPageName] = useState('Signup');
-
     const { userInfo, fieldNameError, formError, signupSuccess, handleInputChange, handleFormSubmit } = useForm(pageName)
-
-    // const [userInfo, setUserInfo] = useState({ username: '', password: '' })
-    // const [fieldNameError, setFieldNameError] = useState({ usernameError: '', passwordError: '' })
-    // const [signupError, setSignupError] = useState('')
-    // const [signupSuccess, setSignupSuccess] = useState('')
-
-    // const handleInputChange = (e) => {
-    //     setUserInfo((prevUserInfo) => {
-    //         let userData = JSON.parse(JSON.stringify(prevUserInfo))
-    //         userData[e.target.name] = e.target.value;
-    //         return userData
-    //     })
-    //     if (fieldNameError[e.target.name + 'Error'] !== '') {
-    //         setFieldNameError((prevFieldNameError) => {
-    //             let fieldError = JSON.parse(JSON.stringify(prevFieldNameError))
-    //             fieldError[e.target.name + 'Error'] = '';
-    //             return fieldError
-    //         })
-    //     }
-    //     if (signupError) {
-    //         setSignupError('')
-    //     }
-    // }
-
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault();
-    //     let result = validateForm();
-    //     if (result) {
-    //         let { username, password } = userInfo;
-    //         const userData = { username: username, password: password };
-    //         try {
-    //             let responseData = await axios.post('http://localhost:5000/userData/user/signup', userData)
-    //             setSignupSuccess('Account Created Successfully')
-    //             setUserInfo((prevUserInfo) => {
-    //                 let userData = JSON.parse(JSON.stringify(prevUserInfo))
-    //                 userData['username'] = '';
-    //                 userData['password'] = '';
-    //                 return userData
-    //             })
-    //             console.log(responseData.data)
-    //         }
-    //         catch (err) {
-    //             setSignupError('UserName Already Exist')
-    //         }
-    //     }
-    // }
-
-    // const validateForm = () => {
-    //     let result = true;
-    //     Object.keys(userInfo).forEach((fieldName) => {
-    //         if (fieldName === 'password' && userInfo[fieldName].length < 8) {
-    //             setFieldNameError((prevFieldNameError) => {
-    //                 let fieldError = JSON.parse(JSON.stringify(prevFieldNameError))
-    //                 fieldError[fieldName + 'Error'] = `${fieldName} must be atleast 8 character length`;
-    //                 return fieldError
-    //             })
-    //             result = false;
-    //         }
-    //         if (userInfo[fieldName] === '') {
-    //             setFieldNameError((prevFieldNameError) => {
-    //                 let fieldError = JSON.parse(JSON.stringify(prevFieldNameError))
-    //                 fieldError[fieldName + 'Error'] = `Please Enter ${fieldName}`;
-    //                 return fieldError
-    //             })
-    //             result = false
-    //         }
-    //     })
-    //     return result;
-    // }
-
     if (localStorage.getItem('token')) {
         return <Redirect to='/' />
     }
