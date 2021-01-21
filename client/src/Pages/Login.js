@@ -1,66 +1,14 @@
 import React, { useState } from 'react';
 import '../css/form.css';
 import { Link, Redirect } from 'react-router-dom';
-import axios from 'axios';
 import { setUserName, setUserToken } from '../Redux/actions/AthenticateAction';
 import { connect } from 'react-redux';
+import useForm from '../Hooks/useForm';
 
 function Login(props) {
 
-    const [userInfo, setUserInfo] = useState({ username: '', password: '' })
-    const [fieldNameError, setFieldNameError] = useState({ usernameError: '', passwordError: '' })
-    const [loginError, setLoginError] = useState('')
-
-    const handleInputChange = (e) => {
-        setUserInfo((prevUserInfo) => {
-            let userData = JSON.parse(JSON.stringify(prevUserInfo))
-            userData[e.target.name] = e.target.value;
-            return userData
-        })
-        if (fieldNameError[e.target.name + 'Error'] !== '') {
-            setFieldNameError((prevFieldNameError) => {
-                let fieldError = JSON.parse(JSON.stringify(prevFieldNameError))
-                fieldError[e.target.name + 'Error'] = '';
-                return fieldError
-            })
-        }
-        if (loginError) {
-            setLoginError('')
-        }
-    }
-
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
-        let result = validateForm();
-        if (result) {
-            let { username, password } = userInfo;
-            const userData = { username: username, password: password };
-            try {
-                let responseData = await axios.post('http://localhost:5000/userData/user/login', userData)
-                props.setUserName(responseData.data)
-                props.setUserToken('asdas!@#!@jsbdfjbs.12(ssfsdf')
-            }
-            catch (err) {
-                setLoginError('Invalid Username or Password')
-            }
-        }
-    }
-
-    const validateForm = () => {
-        let result = true;
-        Object.keys(userInfo).forEach((fieldName) => {
-            if (userInfo[fieldName] === '') {
-                setFieldNameError((prevFieldNameError) => {
-                    let fieldError = JSON.parse(JSON.stringify(prevFieldNameError))
-                    fieldError[fieldName + 'Error'] = `Please Enter ${fieldName}`;
-                    return fieldError
-                })
-                result = false
-            }
-        })
-        return result;
-    }
-
+    const [pageName, setPageName] = useState('Login');
+    const { userInfo, fieldNameError, formError, handleInputChange, handleFormSubmit } = useForm(pageName)
     if (props.AuthenticateReducer.usertoken) {
         return <Redirect to='/' />
     }
@@ -100,7 +48,7 @@ function Login(props) {
                                         }
                                         <button className="form-submit-btn">Sign in</button>
                                         {
-                                            loginError ? <div className="form-error">{loginError}</div> : null
+                                            formError ? <div className="form-error">{formError}</div> : null
                                         }
                                         <div className="form-having-account">Don't have an Account? <Link to="/signup">Signup</Link></div>
                                     </form>
