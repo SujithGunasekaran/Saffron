@@ -1,7 +1,7 @@
 .form-main
 {
     padding : 20px 20px;
-    background-color: rgb(245, 235, 236);
+    background-color: var(--body-background);
     width : 100%;
     min-height : 100vh;
 }
@@ -20,7 +20,7 @@
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 0.8px;
-    color : rgb(241, 153, 169);
+    color : rgb(241, 143, 161);
 }
 .form-heading-name
 {
@@ -28,7 +28,7 @@
     font-family: 'Noto Serif', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
-    color : rgb(100, 96, 96);
+    color : rgb(71, 69, 69);
     text-align: center;
 }
 .form-heading-name-hr
@@ -51,7 +51,7 @@
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.2px;
-    color : rgb(241, 153, 169);
+    color : rgb(238, 125, 146);
 }
 .form-input-field
 {
@@ -90,7 +90,7 @@
     height : 45px;
     background-color: rgb(230, 171, 182);
     font-size: 17px;
-    color : rgb(56, 55, 55);
+    color : rgb(44, 44, 44);
     font-family: "Nunito",sans-serif;
     transition: 0.5s all ease-in-out;
 }
@@ -115,7 +115,7 @@
 {
     display: inline-block;
     text-decoration: none;
-    color : rgb(238, 144, 161);
+    color : rgb(238, 116, 138);
 }
 .form-having-account a:focus
 {

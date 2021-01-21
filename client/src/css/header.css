@@ -16,7 +16,7 @@
     font-weight: 700;
     letter-spacing: 0.8px;
     /* color : rgb(238, 180, 190); */
-    color : rgb(241, 153, 169);
+    color : rgb(240, 121, 143);
 }
 .header-login-name
 {
@@ -26,12 +26,23 @@
     border: none;
     font-size: 17px;
     letter-spacing: 0.1px;
-    color : rgb(241, 153, 169);
+    color : rgb(240, 121, 143);
 }
-.header-login-name a
+.header-normal-view a
 {
-    color : rgb(241, 153, 169);
+    color : rgb(240, 121, 143);
     text-decoration: none;
+}
+.header-mobile-view
+{
+    display: none;
+}
+.header-mobile-view a 
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    color : rgb(240, 94, 120);
+    font-size: 20px;
 }
 
 .header-user-name-display
@@ -48,18 +59,18 @@
     border: none;
     font-size: 17px;
     letter-spacing: 0.1px;
-    color : rgb(241, 153, 169);
+    color : rgb(241, 91, 119);
 }
 .header-user-avatar
 {
-    background-color: rgb(241, 153, 169) !important;
+    background-color: rgb(231, 121, 141) !important;
 }
 .header-user-logout
 {
     font-weight: bold !important;
     font-size: 25px;
     margin-right: 5px !important;
-    color : rgb(245, 164, 178) !important;
+    color : rgb(236, 108, 129) !important;
     cursor: pointer;
 }
 .header-tooltip
@@ -75,17 +86,16 @@
 .header-tooltip-open
 {
     visibility: hidden;
-    /* width: 50px; */
-    background-color: black;
+    background-color: rgb(75, 73, 73);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 10px;
     position: absolute;
     z-index: 1;
-    top : 60px;
+    top : 70px;
     font-size: 13px;
-    margin-left: -48px;
+    margin-left: -20px;
     opacity: 0;
     transition: opacity 0.7s;
 }
@@ -98,7 +108,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent black transparent;
+    border-color: transparent transparent rgb(75, 73, 73) transparent;
 }
 .header-tooltip:hover .header-tooltip-open
 {
@@ -106,6 +116,65 @@
     opacity: 1;
 }
 
+.mobile-view-side-bar
+{
+    display: none;
+    position: absolute;
+    top : 0;
+    left : 0;
+    background-color: rgb(241, 153, 169);
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50rem);
+}
+.mobile-view-side-bar.open
+{   
+    transform: translate(0rem);
+    z-index: 10000;
+}
+.mobile-view-side-close-btn
+{
+    width: 20px;
+    height: 20px;
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    cursor: pointer;
+    margin-top: 20px; 
+    margin-right: 20px;
+    margin-left: auto;
+}
+.mobile-view-name
+{
+    color : white;
+    padding : 20px 20px;
+    font-family: "Nunito",sans-serif;
+    font-size: 19px;
+}
+.mobile-view-signout-display
+{
+    padding : 25px 20px;
+    display: flex;
+    align-items: center;
+}
+.mobile-view-signout-icon
+{
+    font-size: 20px;
+    color: white;
+}
+.mobile-view-signout-name
+{
+    padding-left: 15px;
+    color : white;
+    font-family: "Nunito",sans-serif;
+    font-size: 19px;
+}
 @media(max-width : 440px){
+    .mobile-view-side-bar{display: block;}
+    .header-user-logout-normal-view {display: none;}
+    .header-mobile-view { display: block; }
+    .header-normal-view { display: none; }
     .header-container{padding : 20px 5px 20px 5px}
 }
