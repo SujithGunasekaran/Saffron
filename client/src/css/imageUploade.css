@@ -28,7 +28,7 @@
     width : 0;
     opacity: 0;
 }
-.image-upload-container label span
+.image-upload-icon
 {
     display : block;
     width : 45px;
@@ -57,6 +57,43 @@
     padding : 10px 0px;
     color : rgb(235, 92, 92);
     font-family: 'Noto Serif', sans-serif;
+}
+
+.image-upload-tooltip
+{
+    color : black;
+}
+.image-upload-tooltip-open
+{
+    visibility: hidden;
+    background-color: rgb(75, 73, 73);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top : 275px;
+    font-size: 13px;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.image-upload-tooltip-open::before
+{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(75, 73, 73) transparent;
+}
+.image-upload-tooltip:hover .image-upload-tooltip-open
+{
+    visibility: visible;
+    opacity: 1;
 }
 
 @media(max-width : 440px){

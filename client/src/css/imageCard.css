@@ -1,7 +1,7 @@
 .image-card-container
 {
     padding : 20px 20px;
-    background-color: var(--header-background);
+    background-color: var(--body-background);
     width : 100%;
 }
 .image-card-image
@@ -26,15 +26,15 @@
 .image-card-username
 {
     font-family: "Nunito",sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.2px;
-    color : rgb(241, 153, 169);
+    color : rgb(236, 86, 114);
 }
 .image-card-download-icon
 {
     font-size: 20px;
-    color : rgb(241, 153, 169);
+    color : rgb(236, 86, 114);
     margin-left: auto;
     cursor: pointer;
 }
