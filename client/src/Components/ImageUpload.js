@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import '../css/imageUploade.css';
 import AddIcon from '@material-ui/icons/Add';
-import Tooltip from '@material-ui/core/Tooltip';
 import Progress from '../Components/Progress';
+import { connect } from 'react-redux';
 
-export default function ImageUpload() {
+function ImageUpload(props) {
 
     const [fileName, setFileName] = useState('')
     const [imageError, setImageError] = useState('')
+    const [authenticateError, setAuthenticateError] = useState('');
+
+    const { username } = props.AuthenticateReducer;
 
     const imageUploader = (e) => {
         window.scrollTo({ top: '0', behavior: 'smooth' })
-        setImageError('')
-        var imageType = ['image/jpeg', 'image/jpg', 'image/png'];
-        const selectedImage = e.target.files[0];
-        if (selectedImage && imageType.includes(selectedImage.type)) {
-            setFileName(selectedImage)
+        if (username) {
+            setImageError('')
+            var imageType = ['image/jpeg', 'image/jpg', 'image/png'];
+            const selectedImage = e.target.files[0];
+            if (selectedImage && imageType.includes(selectedImage.type)) {
+                setFileName(selectedImage)
+            }
+            else {
+                setImageError('Please select image file ( png or jpeg )')
+            }
         }
         else {
-            setImageError('Please select image file ( png or jpeg )')
+            setAuthenticateError('Please Login to Upload Image')
         }
     }
 
@@ -35,12 +43,12 @@ export default function ImageUpload() {
                                     <span className="image-upload-icon"><AddIcon style={{ fontSize: '20px' }} /></span>
                                     <span className="image-upload-tooltip-open">Upload Image</span>
                                 </div>
-                                {/* <Tooltip title="Upload Image" arrow>
-                                    <span><AddIcon style={{ fontSize: '20px' }} /></span>
-                                </Tooltip> */}
                             </label>
                             {
                                 fileName ? <div className="image-upload-file-name">Uploading {fileName.name}...</div> : null
+                            }
+                            {
+                                authenticateError ? <div className="image-upload-error">{authenticateError}</div> : null
                             }
                             {
                                 imageError ? <div className="image-upload-error">{imageError}</div> : null
@@ -55,3 +63,11 @@ export default function ImageUpload() {
         </div>
     )
 }
+
+const mapStateToProps = (state) => (
+    {
+        AuthenticateReducer: state.AuthenticateReducer
+    }
+)
+
+export default connect(mapStateToProps)(ImageUpload)
