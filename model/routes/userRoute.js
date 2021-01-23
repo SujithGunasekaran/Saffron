@@ -9,12 +9,10 @@ router.route('/user/signup').post((req, res) => {
     const userInfo = { username: username, password: password };
     axios.post('http://localhost:5000/commonRoute/common/signup', userInfo)
         .then((responseData) => {
-            if (responseData.data === 'Success') {
-                res.status(200).send(responseData.data)
-            }
+            res.status(200).send(responseData.data)
         })
         .catch((err) => {
-            res.status(404).send(err)
+            res.status(404).send(err);
         })
 })
 
@@ -26,13 +24,12 @@ router.route('/user/login').post((req, res) => {
     const userData = { username: username, password: password };
     axios.post('http://localhost:5000/commonRoute/common/login', userData)
         .then((responseData) => {
-            console.log(responseData.data)
-            res.status(200).json(responseData.data).send()
+            res.status(200).send(responseData.data)
         })
         .catch((err) => {
-            console.log(err.message)
             res.status(404).send(err)
         })
+
 })
 
 module.exports = router;
