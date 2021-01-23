@@ -62,6 +62,7 @@ const useForm = (pageName) => {
                 }
             }
             catch (err) {
+                console.log(err)
                 if (pageName === 'Login') {
                     setFormError('Invalid Username or Password')
                 }

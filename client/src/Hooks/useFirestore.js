@@ -9,7 +9,6 @@ const useFirestore = (image, userName) => {
 
     useEffect(() => {
         const uploadImage = async () => {
-            console.log(userName)
             const storeageRef = galleryStorage.ref();
             const collectionRef = galleryFireStore.collection('images');
             const fileRef = storeageRef.child(image.name);
@@ -30,7 +29,7 @@ const useFirestore = (image, userName) => {
                 })
         }
         uploadImage();
-    }, [image])
+    }, [image, userName])
 
     return { progress, imageUploadeError, URL }
 
