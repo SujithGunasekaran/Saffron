@@ -35,9 +35,8 @@
 {
     margin-left: auto;
     margin-right: auto;
+    border-bottom : 3px solid  black !important;
     width : 110px;
-    background-color:  rgb(219, 16, 53);
-    border : 2px solid  rgb(194, 13, 46);
 }
 .form-container form
 {
@@ -169,6 +168,21 @@
     display: inline-block;
     text-decoration: none;
     color : rgb(238, 144, 161);
+}
+
+.login-form-heading
+{
+    padding-top : 24px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color : #252424;
+    font-size: 28px;
+    word-spacing: 2px;
+}
+.login-form-heading-hr
+{
+    border-bottom : 3px solid  #1e2d7d;
+    width : 95px;
 }
 
 @media(max-width : 440px){
