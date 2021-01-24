@@ -11,3 +11,5 @@
   2. `React.js`
   3. `Firebase`
   4. `mongodb`
+  5. `Express.js`
+  6. `Node.js`
