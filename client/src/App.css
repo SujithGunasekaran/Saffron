@@ -38,12 +38,17 @@
 }
 
 :root{
-  --header-background : #F6EFF7;
-  --body-background : #F6EFF7;
+  --header-background : #f3e5f1;
+  --body-background : #faf2f8;
 }
 
+.app-main
+{
+  min-height : 100vh;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
