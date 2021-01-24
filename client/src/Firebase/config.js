@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
 
-var firebaseConfig = { '<<<<<<<<< Add your Firebase config >>>>>>>>>>' };
+var firebaseConfig = " <<<<<<<<<<<<<<<< Add Firebase Config data >>>>>>>>>>>>>>>>>";
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
